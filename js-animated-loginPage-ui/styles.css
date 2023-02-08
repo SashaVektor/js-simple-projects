@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+
+section.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--grey);
+}
+
+.box {
+  width: 65rem;
+  height: auto;
+
+}
+
+.main-container {
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, .5);
+}
+
+.img-container {
+  width: 50%;
+  height: 100%;
+  padding: 4rem 1rem;
+  background-color: var(--light-blue);
+  animation: slide-down .8s ease;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.form-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-up .8s ease;
+}
+
+form span {
+  display: block;
+  margin-top: 10px;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.forgot {
+  position: relative;
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.close i {
+  font-size: 1.5rem;
+  color: red;
+}
+
+.register {
+  display: none;
+}
+
+@media (max-width: 769px) {
+  .img-container {
+    display: none;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+}
